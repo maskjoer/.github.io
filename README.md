@@ -18,6 +18,7 @@
 - `index.html`：博客首页，自动渲染文章列表。
 - `article.html`：文章详情页模板，通过 URL 参数 `slug` 加载内容。
 - `posts.js`：文章数据源，新增文章只需在此追加对象（含 `tags` 字段）。
+- `POST_TEMPLATE.md`：新文章录入模板，可直接复制后填写。
 
 ## 本地预览
 
@@ -27,3 +28,24 @@
 ## 发布方式
 
 将代码推送到仓库默认分支，GitHub Pages 会自动更新站点。
+
+## 新增文章（3 分钟流程）
+
+1. 打开 `POST_TEMPLATE.md`，复制“文章对象模板”。
+2. 打开 `posts.js`，把模板粘贴到数组最前面并填好内容。
+3. 保存后本地打开 `index.html` 验证列表、分类、标签、详情页是否正常。
+4. 执行提交发布：
+
+```bash
+git add posts.js
+git commit -m "feat: add new post"
+git push origin main
+```
+
+## 填写规范
+
+1. `slug` 必须唯一，建议英文小写加短横线。
+2. `date` 使用 `YYYY.MM.DD` 格式。
+3. `category` 用于分类筛选，建议复用已有分类命名。
+4. `tags` 建议 2-4 个，便于标签筛选。
+5. `content` 每一项是一段正文。

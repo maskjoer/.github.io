@@ -1,4 +1,5 @@
 window.POSTS = [
+  // Add new posts at the top so the homepage shows latest entries first.
   {
     slug: "build-blog-with-low-maintenance",
     title: "从零搭建低维护成本的个人博客",
